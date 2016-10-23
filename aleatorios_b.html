@@ -1,0 +1,41 @@
+<HTML>
+<HEAD> 
+	<script type="text/javascript"> 
+		var pares = new Array();
+		var impares= new Array();
+		var n;
+
+		for (var i = 0; i < 100; i++) {
+			n = Math.floor((Math.random() * 1000) + 1);
+			if (n%2==0) {
+				pares.push(n);
+			}else{
+				impares.push(n);
+			}
+		}
+
+		n = pares.length;
+		if (n < impares.length) n=impares.length;
+		document.write("<center><h1>Aleatórios</h1>");
+		document.write("<table border=1 style='border-collapse: collapse'><tr><td width=2>Pares</td><td>Impares</td></tr>");
+			for (var i = 0; i < n; i++) {
+				document.write("<tr>");
+				if (pares[i]!=null) {
+					document.write("<td>"+pares[i]+"</td>");
+				}else{
+					document.write("<td></td>");
+				}
+				if (impares[i]!=null){
+					document.write("<td>"+impares[i]+"</td>");
+				}else{
+					document.write("<td></td>");
+				}
+				document.write("</tr>");
+			}
+		document.write("</table></center>");
+		
+	</script>
+</HEAD>
+<BODY> 
+</BODY>
+</HTML>

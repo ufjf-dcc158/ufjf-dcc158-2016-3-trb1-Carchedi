@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+	<style type="text/css">
+		table{
+			border: 2px solid black;
+		}
+		th, td {
+			font-size: 300%;
+		    border: 0px; 
+		    width: 60px;
+		    height: 60px; 
+		} 
+	</style>
+	<script type="text/javascript">
+		var i = window.prompt("Informe dimensão do tabuleiro: ");
+		var x = window.prompt("informe a posição do cavalo em x: ");
+		var y = window.prompt("informe a posição do cavalo em y: ");
+
+		document.write("<center><h1>Tabuleiro de Xadrez</h1><br></b></center>" );
+		document.write("<center><table><tr>");  
+		document.write("");
+
+		x = parseInt(x);
+		y = parseInt(y);
+ 
+		for (w=0; w<i; w++){
+			document.write("<tr>");
+			for (h=0; h<i; h++) {
+				//w=x  h=y   
+				document.write("<td align=center ");
+				if( (h==x-2 && w==y-3) ||
+				    (h==x && w==y-3)   ||
+				    (h==x-3 && w==y-2) ||
+				    (h==x+1 && w==y-2) ||
+
+				    (h==x-2 && w==y+1)||
+				    (h==x && w==y+1)   ||
+				    (h==x-3 && w==y) ||
+				    (h==x+1 && w==y)){ //possiveis movimentos
+					document.write("bgcolor=red><font color=red>");
+				}else{
+					if(w%2==0){
+						if (h%2==0) {
+							document.write("bgcolor=black><font color=white>");
+						}else{
+							document.write("bgcolor=white><font color=black>");
+						}
+					}else{
+						if (h%2==0) {
+							document.write("bgcolor=white><font color=black>");
+						}else{
+							document.write("bgcolor=black><font color=white>");
+						}
+					}
+					if (w==(y-1) && h==(x-1)) {
+						document.write("&#9822");
+					}
+				} 
+				document.write("</font></td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</center>" );
+	</script>
+</HEAD>
+<BODY> 
+</BODY>
+</HTML>

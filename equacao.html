@@ -1,0 +1,25 @@
+<HTML>
+<HEAD> 
+	<script type="text/javascript"> 
+		 
+		var a = window.prompt("Informe a: ");
+		var b = window.prompt("Informe b: ");
+		var c = window.prompt("Informe c: ");
+		  
+		document.write("<center><h1>Equação 2 Grau</h1></b><br>As raizes da equação "+a+"x²+"+b+"x+"+c+" são:</center><br>"); 
+
+		var delta = (b*b)-(4*a*c);
+
+		if(delta<0){
+			document.write("<center>Delta menor que 0.</center>")
+		}else{
+			raiz1 = ((-1*b)+Math.sqrt(delta))/(2*a);
+			raiz2 = ((-1*b)-Math.sqrt(delta))/(2*a);
+			document.write("<center>x':"+raiz1+"<br>x'':"+raiz2+"</center>");
+		}
+		 
+	</script>
+</HEAD>
+<BODY> 
+</BODY>
+</HTML>

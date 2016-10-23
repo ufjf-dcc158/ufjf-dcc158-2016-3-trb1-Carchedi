@@ -1,0 +1,41 @@
+<HTML>
+<HEAD> 
+	<script type="text/javascript"> 
+		function EhPrimo(valor) { 
+			var naoEhPrimo = 0;
+			 			
+			for (var i = 2; i < valor/2; i++) {
+				if (valor%i == 0) {
+					naoEhPrimo = 1;
+				} 
+			} 
+			if (naoEhPrimo==1) {
+				return "0";
+			}else{
+				return valor;
+			}
+			
+		}
+
+		var N1 = window.prompt("Informe N1: ");
+		var N2 = window.prompt("Informe N2: ");
+		 
+		if (N2 > 100) {
+			N2=100;
+		}
+
+		document.write("<center><h1>Primos</h1></b><br>Os numeros primos entre "+N1+" e "+
+			N2+" são:</center><br>" );
+
+		for (var i = N1; i <=N2; i++) {
+			var j = EhPrimo(i);
+			if (j !=0) { 
+				document.write(i+"   "); 
+			}
+		}
+		 
+	</script>
+</HEAD>
+<BODY> 
+</BODY>
+</HTML>
